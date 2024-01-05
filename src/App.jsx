@@ -7,6 +7,7 @@ function App() {
   const [cb, setCb] = useState(false);
   return (
     <>
+      {cb ? <CalculateAge date={date} cb={setCb}/> :
       <div className="input-section">
         <form>
           <fieldset>
@@ -28,7 +29,7 @@ function App() {
         }
         <button onClick={()=>setCb(true)}>Calculate</button>
       </div>
-      {cb ? <CalculateAge date={date} /> : null}
+    }
     </>
   )
 }
